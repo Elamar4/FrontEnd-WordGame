@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    user-select: none;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(image/brain\ 1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body .gameContanier {
+    border: 2px solid blue;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.63);
+    width: 70%;
+    height: 95%;
+    max-width: 1200px;
+    max-height: 90vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gameContanier .wordGame {
+    color: white;
+    padding: 30px 20px;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.up {
+    display: flex;
+    justify-content: space-around;
+}
+
+.up .time,
+.up .score,
+.up .buttonStart {
+    font-size: 20px;
+    color: white;
+    background-color: gray;
+    padding: 15px 20px;
+    border-radius: 8%;
+    border: 2px solid blue;
+}
+
+.downLayer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+
+.info {
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.678);
+    border-radius: 15px;
+    width: 25%;
+    height: fit-content;
+    padding: 10px;
+    line-height: 30px;
+}
+
+.info h2 {
+    font-size: 25px;
+    padding: 20px 10px;
+    font-weight: bolder;
+}
+
+.info li {
+    font-size: 14px;
+}
+
+.middle {
+    width: 45%;
+    text-align: center;
+}
+
+.middle .letters {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.boxDiv {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.boxes {
+    width: 20%;
+    height: 20%;
+    padding: 10px 5px;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: gray;
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 37px;
+}
+
+.letter-button {
+    background-color: aqua;
+    color: black;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 40%;
+    cursor: pointer;
+    border: none;
+}
+
+.letter-button:hover {
+    background-color: #e0e0e0;
+}
+
+.letter-button:active {
+    background-color: #c0c0c0;
+}
+
+.middle input {
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.input1 {
+    display: none;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right .buttons {
+    background-color: gray;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 8%;
+    cursor: pointer;
+}
+
+.hintContanier {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.hintDB {
+    display: none;
+}
+
+.hintDA {
+    display: block;
+    background-color: white;
+    width: 60%;
+    text-align: center;
+    font-size: 20px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    height: auto;
+    animation: slideIn 0.5s forwards;
+}
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.before {
+    color: gray;
+}
+
+.after {
+    color: white;
+}
+@media only screen and (max-width:1180px) {
+    .boxes{
+       
+        width: 10%;
+    height: 10%;
+    padding: 10px 5px;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: gray;
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 37px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .right .buttons,
+    .up .time,
+    .up .score,
+    .up .buttonStart {
+        font-size: 15px;
+        padding: 15px 25px;
+    }
+
+    .letter-button {
+        padding: 10px 20px;
+    }
+.info{
+    width: 30%;
+}
+    .info h2 {
+        font-size: 30px;
+    }
+
+    .info li {
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+
+    .middle input {
+        width: 80%;
+        font-size: 12px;
+    }
+    .buttons{
+        padding: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .right .buttons,
+    .up .time,
+    .up .score,
+    .up .buttonStart {
+        font-size: 12px;
+        padding: 15px 15px;
+    }
+    .boxes {
+        width: 20%;
+        height: 20%;
+        padding: 10px 6px;
+        font-size: 10px;
+        
+    }
+    .letter-button {
+        padding: 8px 14px;
+    }
+
+    .info h2 {
+        font-size: 20px;
+    }
+
+    .info li {
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+
+
+    .middle input {
+        width: 90%;
+        font-size: 10px;
+    }
+
+    .gameContanier .wordGame {
+        font-size: 30px;
+    }
+   .right .buttons {    
+        padding: 10px 10px;
+    }
+    .hintDA {    
+        width: 80%;     
+        font-size: 15px;
+        padding: 10px 10px;
+        margin: 10px;
+    }
+    .downLayer {
+        margin-top: 50px;
+    }
+}
+@media only screen and (max-width: 755px) {
+    .downLayer {
+        margin-top: 40px;
+    }
+    .right .buttons,
+    .up .time,
+    .up .score,
+    .up .buttonStart {
+        font-size: 12px;
+        padding: 15px 15px;
+    }
+    .boxes {
+        width: 20%;
+        height: 20%;
+        padding: 10px 6px;
+        font-size: 10px;
+        
+    }
+    .letter-button {
+        padding: 8px 10px;
+        font-size: 10px;
+    }
+
+    .info h2 {
+        font-size: 15px;
+    }
+
+    .info li {
+        font-size: 8px;
+        line-height: 1.5;
+    }
+
+    .info {
+        margin-top: 50px;
+    }
+    .middle input {
+        width: 100%;
+        font-weight: bolder;
+        font-size: 8px;
+    }
+
+    .gameContanier .wordGame {
+        font-size: 30px;
+    }
+    .right {
+        margin-top: 50px;
+    }
+   .right .buttons {    
+        padding: 10px 5px;
+    }
+    .hintDA {    
+        width: 80%;     
+        font-size: 10px;
+        padding: 10px 10px;
+        margin: 10px;
+    }
+}
+
